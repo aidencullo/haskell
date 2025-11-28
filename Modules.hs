@@ -124,3 +124,18 @@ decode shift = encode (negate shift)
 
 testDecode = decode 5 "Rfww~%Hmwnxyrfx&%Mt%mt%mt&" == "Marry Christmas! Ho ho ho!"
 testEncodeDecode = decode 5 (encode 5 "Marry Christmas! Ho ho ho!") == "Marry Christmas! Ho ho ho!"
+
+
+
+
+
+phoneBook = 
+    [("amelia","555-2938")  
+    ,("freya","452-2928")  
+    ,("isabella","493-2928")  
+    ,("neil","205-2928")  
+    ,("roald","939-8282")  
+    ,("tenzing","853-2492")  
+    ]  
+-- Let's make a function that looks up some value given a key.
+lookUpValue :: String -> String
