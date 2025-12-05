@@ -139,5 +139,5 @@ phoneBook =
     ]  
 -- Let's make a function that looks up some value given a key.
 lookUpValue :: [(String, String)] -> [(String, String)]
-lookUpValue value = filter ((==) value . fst) phoneBook
+lookUpValue value = filter null phoneBook
 firsts = map fst phoneBook
