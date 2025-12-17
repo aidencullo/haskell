@@ -138,6 +138,8 @@ phoneBook =
     ,("tenzing","853-2492")  
     ]  
 -- Let's make a function that looks up some value given a key.
-lookUpValue :: String -> String
-lookUpValue key =  (snd . head . filter) (\(k, v) -> k == key) phoneBook
-firsts = map fst phoneBook
+-- lookUpValue =  head . filter
+-- lookUpValue key =  (snd . head . filter) (\(k, v) -> k == key) phoneBook
+-- firsts = map fst phoneBook
+lookUpValue :: (a -> Bool) -> [a] -> a
+lookUpValue p = head . filter p
