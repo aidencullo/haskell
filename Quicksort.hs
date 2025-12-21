@@ -1,8 +1,13 @@
 quickSort :: [a] -> [a]
-quickSortHelper xs [] = xs
-quickSortHelper [] xs = xs
-
+-- quickSort (x:xs) =
+--   let left = filter xs (<x)
+-- f x =
+--   let y = x + 1
+--       z = y * 2
+--   in z
+  
 oneToTen = [1..10]
+tenToOne = reverse oneToTen
 
 testQuickSort :: Bool
-testQuickSort = quickSort oneToTen == oneToTen
+testQuickSort = quickSort tenToOne == oneToTen
