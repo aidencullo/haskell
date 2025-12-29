@@ -143,3 +143,4 @@ phoneBook =
 -- firsts = map fst phoneBook
 lookUpValue :: (a -> Bool) -> [a] -> a
 lookUpValue p = head . filter p
+lookUpPhone = lookUpValue null phoneBook
