@@ -137,15 +137,12 @@ phoneBook =
     ,("roald","939-8282")  
     ,("tenzing","853-2492")  
     ]  
+
+
 -- Let's make a function that looks up some value given a key.
 -- lookUpValue =  head . filter
--- lookUpValue key =  (snd . head . filter) (\(k, v) -> k == key) phoneBook
--- firsts = map fst phoneBook
--- lookUpValue :: (a -> Bool) -> [a] -> a
--- lookUpValue p = head . filter p
 ameliaNumber = "555-2928"
 ameliaName = "amelia"
-lookUpValue key = ameliaNubmer
+lookUpValue key = ameliaNumber
 testLookUpValue :: Bool
 testLookUpValue = lookUpValue ameliaName == ameliaNumber
-testLookUpValue2 = lookUpValue ameliaName == ameliaNumber
