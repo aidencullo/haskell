@@ -140,9 +140,8 @@ phoneBook =
 
 
 -- Let's make a function that looks up some value given a key.
--- lookUpValue =  head . filter
 ameliaNumber = "555-2928"
 ameliaName = "amelia"
-lookUpValue key = ameliaNumber
-testLookUpValue :: Bool
-testLookUpValue = lookUpValue ameliaName == ameliaNumber
+ameliaKeyValue = ("amelia","555-2938")
+lookUpValue key = filter (==ameliaKeyValue) phoneBook
+testLookUpValue = lookUpValue ameliaName == [ameliaKeyValue]
