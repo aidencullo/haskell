@@ -143,7 +143,9 @@ phoneBook =
 -- firsts = map fst phoneBook
 -- lookUpValue :: (a -> Bool) -> [a] -> a
 -- lookUpValue p = head . filter p
-ameliaNubmer = "555-2928"
+ameliaNumber = "555-2928"
+ameliaName = "amelia"
 lookUpValue key = ameliaNubmer
 testLookUpValue :: Bool
-testLookUpValue = lookUpValue "amelia" == "555-2928"
+testLookUpValue = lookUpValue ameliaName == ameliaNumber
+testLookUpValue2 = lookUpValue ameliaName == ameliaNumber
