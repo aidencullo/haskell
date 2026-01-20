@@ -146,11 +146,3 @@ ameliaKeyValue = ("amelia","555-2938")
 lookUpValue key = filter (==ameliaKeyValue) phoneBook
 testLookUpValue = lookUpValue ameliaName == [ameliaKeyValue]
 
--- ghci> findKey "tenzing" phoneBook  
--- Just "853-2492"  
--- ghci> findKey "amelia" phoneBook  
--- Just "555-2938"  
--- ghci> findKey "christopher" phoneBook  
--- Nothing  
-
--- findKey "tenzing" phoneBook == Just "853-2492"
