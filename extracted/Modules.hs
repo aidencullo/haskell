@@ -154,9 +154,3 @@ testLookUpValue = lookUpValue ameliaName == [ameliaKeyValue]
 -- Nothing  
 
 -- findKey "tenzing" phoneBook == Just "853-2492"
-
-findKey :: String -> [(String, String)] -> String
-findKey _ _ = Nothing
-
-main :: IO ()
-main = print (findKey "tenzing" phoneBook == Just "853-2492")

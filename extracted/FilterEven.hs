@@ -1,0 +1,1 @@
+filterEven = head . filter even

@@ -95,7 +95,7 @@ testOn = groupByNormal values == groupByUsingOn values
 -- ghci>  
 -- Hmmm, well, it kind of does what words does but we're left with elements of only spaces. Hmm, whatever shall we do? I know, let's filter that sucker.
 groups = groupBy ((==) `on` isSpace) "hey folks its me"
--- filteredGroups = filter (not . isSpace . head) groups
+filteredGroups = filter (not . isSpace . head) groups
 
 
 
@@ -146,17 +146,3 @@ ameliaKeyValue = ("amelia","555-2938")
 lookUpValue key = filter (==ameliaKeyValue) phoneBook
 testLookUpValue = lookUpValue ameliaName == [ameliaKeyValue]
 
--- ghci> findKey "tenzing" phoneBook  
--- Just "853-2492"  
--- ghci> findKey "amelia" phoneBook  
--- Just "555-2938"  
--- ghci> findKey "christopher" phoneBook  
--- Nothing  
-
--- findKey "tenzing" phoneBook == Just "853-2492"
-
-findKey :: String -> [(String, String)] -> String
-findKey _ _ = Nothing
-
-main :: IO ()
-main = print (findKey "tenzing" phoneBook == Just "853-2492")
