@@ -139,24 +139,11 @@ phoneBook =
     ]  
 
 
--- Let's make a function that looks up some value given a key.
-ameliaNumber = "555-2928"
-ameliaName = "amelia"
-ameliaKeyValue = ("amelia","555-2938")
-lookUpValue key = filter (==ameliaKeyValue) phoneBook
-testLookUpValue = lookUpValue ameliaName == [ameliaKeyValue]
-
--- ghci> findKey "tenzing" phoneBook  
--- Just "853-2492"  
--- ghci> findKey "amelia" phoneBook  
--- Just "555-2938"  
--- ghci> findKey "christopher" phoneBook  
--- Nothing  
-
--- findKey "tenzing" phoneBook == Just "853-2492"
+lookUpValue :: String -> [(String, String)]
+lookUpValue key = snd . head (filter ((==key) . fst) phoneBook)
 
 findKey :: String -> [(String, String)] -> Maybe String
-findKey _ _ = Nothing
+findKey key _ = lookUpValue key
 
 main :: IO ()
 main = print (findKey "tenzing" phoneBook == Just "853-2492")
