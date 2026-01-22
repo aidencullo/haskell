@@ -155,7 +155,7 @@ testLookUpValue = lookUpValue ameliaName == [ameliaKeyValue]
 
 -- findKey "tenzing" phoneBook == Just "853-2492"
 
-findKey :: String -> [(String, String)] -> String
+findKey :: String -> [(String, String)] -> Maybe String
 findKey _ _ = Nothing
 
 main :: IO ()
