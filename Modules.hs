@@ -95,7 +95,7 @@ testOn = groupByNormal values == groupByUsingOn values
 -- ghci>  
 -- Hmmm, well, it kind of does what words does but we're left with elements of only spaces. Hmm, whatever shall we do? I know, let's filter that sucker.
 groups = groupBy ((==) `on` isSpace) "hey folks its me"
-filteredGroups = filter (not . isSpace . head) groups
+-- filteredGroups = filter (not . isSpace . head) groups
 
 
 
