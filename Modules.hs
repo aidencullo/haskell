@@ -139,11 +139,8 @@ phoneBook =
     ]  
 
 
-lookUpValue :: String -> [(String, String)]
-lookUpValue key = snd . head (filter ((==key) . fst) phoneBook)
-
-findKey :: String -> [(String, String)] -> Maybe String
-findKey key _ = lookUpValue key
+findKey :: String -> [(String, String)] -> [(String, String)]
+findKey key _ = filter (null) phoneBook
 
 main :: IO ()
 main = print "ok"
