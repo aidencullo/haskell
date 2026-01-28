@@ -140,7 +140,7 @@ phoneBook =
 
 
 findKey :: String -> [(String, String)] -> [(String, String)]
-findKey key map = filter (null) phoneBook
+findKey key arr = filter (null) arr
 
 query = findKey "amelia" phoneBook
 
