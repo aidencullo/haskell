@@ -143,4 +143,6 @@ findKey :: String -> [(String, String)] -> [(String, String)]
 findKey key _ = filter (null) phoneBook
 
 main :: IO ()
-main = print "ok"
+main = do
+  print "ok"
+  print "ok"
