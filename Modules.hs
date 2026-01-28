@@ -140,9 +140,9 @@ phoneBook =
 
 
 findKey :: String -> [(String, String)] -> [(String, String)]
-findKey key _ = filter (null) phoneBook
+findKey key map = filter (null) phoneBook
+
+query = findKey "amelia" phoneBook
 
 main :: IO ()
-main = do
-  print "ok"
-  print "ok"
+main = print $ query
