@@ -139,9 +139,8 @@ phoneBook =
     ]  
 
 
-findKey :: String -> [(String, String)] -> [(String, String)]
-findKey key arr = filter (null) arr
-
+findKey :: String -> [(String, String)] -> String
+findKey key arr = snd . head . filter (\(k,v) -> key == k) $ arr
 query = findKey "amelia" phoneBook
 
 main :: IO ()
